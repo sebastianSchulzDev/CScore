@@ -16,7 +16,7 @@
         <header>
             <div class="menu">
                 <ul class="main-menu">
-                    <li><a href="#"> Live</a></li>
+                    <li><a href="index.html"> Live</a></li>
                     <li><a href="matches.html">Mecze</a></li>
                     <li><a href="tables.html">Tabele</a></li>
                     <li><a href="#"> Drużyna</a></li>
@@ -25,12 +25,17 @@
                 <img class="header-logo" src="logo menu góra copy.png" alt="cscore-logo">
                 <div class="parallelogram"></div>
             </div>
-            <div class="live-strip"><span class="live-strip-text">WYNIKI LIVE</span>
-                <div class="dot animated rubberBand"></div>
-            </div>
         </header>
         <main>
-            <div class="main-scores" id="scores">
+            <div class="container3">
+                <button class="premier_league" onclick="show('PL')"></button>
+                <button class="bundesliga" onclick="show('BL1')"></button>
+                <button class="primera_division" onclick="show('PD')"></button>
+                <button class="serie_a" onclick="show('SA')"></button>
+            </div>
+
+            <div class="main-scores" id="table">
+
             </div>
         </main>
     </div>
@@ -39,6 +44,6 @@
 </body>
 
 <script src="data.js"></script>
-<script src="live.js"></script>
+<script src="tables.js"></script>
 
 </html>

@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: mintcream;
 }
 div.wrapper {
   position: relative;
@@ -47,7 +48,9 @@ img.header-logo {
   z-index: 1;
 }
 /*LIVE STRIP CSS*/
-
+.legend {
+  margin-left: 10px;
+}
 .live-strip {
   width: 100%;
   height: 1.5rem;
@@ -71,10 +74,17 @@ img.header-logo {
   animation-iteration-count: infinite;
 }
 /*Main Scores CSS */
+.container2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .main-scores {
   position: absolute;
-  top: 150%;
-  left: 20%;
+  width: 98%;
+  top: 118%;
+  left: 0%;
   text-align: center;
   font-size: 1.5rem;
   transform: translate();
@@ -87,6 +97,20 @@ img.header-logo {
 .fourthmatch {
   background: #ddd;
 }
+.in-play {
+  background: teal;
+}
+.finished {
+  background: green;
+}
+.scheduled {
+  position: relative;
+  background: cyan;
+  margin: 0 0;
+  border: 1px solid black;
+}
+
+.match,
 .firstmatch,
 .secondmatch,
 .thirdmatch,
@@ -94,20 +118,113 @@ img.header-logo {
   width: 100%;
   padding: 10px 10px;
 }
+
 span {
   margin-right: 2rem;
   font-family: "Lato", sans-serif;
 }
-span.hour,
-.hour1,
-.hour2,
-.hour3 {
-  text-align: center;
-  margin-left: 0;
+
+/* stylowanie meczy flexem */
+
+.hour {
+  flex-basis: 10%;
+
+  align-self: center;
 }
-span.result,
-.result1,
-.result2,
-.result3 {
-  animation-iteration-count: infinite;
+.team {
+  flex-basis: 30%;
+}
+.result {
+  flex-basis: 10%;
+}
+.team1 {
+  flex-basis: 30%;
+}
+
+/* css for buttons */
+.premier_league {
+  margin-top: 15px;
+  background-image: url("premier_league.jpg");
+  background-position: center;
+  background-size: contain;
+  height: 220px;
+  width: 250px;
+  border: 0px;
+}
+.bundesliga {
+  margin-top: 15px;
+  background-image: url("bundesliga.png");
+  background-position: center;
+  background-size: contain;
+  height: 220px;
+  width: 250px;
+  border: 0px;
+}
+.primera_division {
+  margin-top: 15px;
+  background-image: url("Primera_Division_Logo.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 220px;
+  width: 250px;
+  border: 0px;
+  color: white;
+}
+.serie_a {
+  margin-top: 15px;
+  background-image: url("seriea.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 220px;
+  width: 250px;
+  border: 0px;
+  color: white;
+}
+.container3 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: absolute;
+  top: 110%;
+  left: 38%;
+}
+
+/* css of tables */
+.tables_look {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: white;
+  border: 1px solid black;
+  align-content: space-between;
+}
+.position {
+  flex-basis: 5%;
+}
+.team_name {
+  flex-basis: 50%;
+}
+.won_number {
+  flex-basis: 5%;
+}
+.draw_number {
+  flex-basis: 5%;
+}
+.lost_number {
+  flex-basis: 5%;
+}
+.points_number {
+  flex-basis: 5%;
+}
+.goals_for {
+  flex-basis: 5%;
+}
+.goals_against {
+  flex-basis: 5%;
+}
+.goal_diff {
+  flex-basis: 5%;
 }
